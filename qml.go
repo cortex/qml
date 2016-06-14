@@ -1125,3 +1125,8 @@ func UnloadResources(r *Resources) {
 	data := (*C.char)(unsafe.Pointer(uintptr(base)+uintptr(r.dataOffset)))
 	C.unregisterResourceData(C.int(r.version), tree, name, data)
 }
+
+func SetApplicationName(name string){
+	cname, _ := unsafeStringData(name)
+	C.applicationSetName(cname)
+}

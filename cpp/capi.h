@@ -110,6 +110,7 @@ void newGuiApplication();
 void applicationExec();
 void applicationExit();
 void applicationFlushAll();
+void applicationSetName(const char *name);
 
 void idleTimerInit(int32_t *guiIdleRun);
 void idleTimerStart();

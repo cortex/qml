@@ -68,6 +68,11 @@ void applicationFlushAll()
     qApp->processEvents();
 }
 
+void applicationSetName(const char* name)
+{
+  qApp->setApplicationName(name);
+}
+
 void *currentThread()
 {
     return QThread::currentThread();
